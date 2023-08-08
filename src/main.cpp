@@ -5,6 +5,9 @@
 // Disclaimer: Don't use RoboRemo for life support systems
 // or any other situations where system failure may affect
 // user or environmental safety.
+//green tx
+//yellow rx
+
 
 #include <ESP8266WiFi.h>
 #include <SPI.h>
@@ -22,7 +25,7 @@
 #define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-#define UART_BAUD 115200
+#define UART_BAUD 921600 //aquarios
 #define packTimeout 5 // ms (if nothing more on UART, then send packet)
 #define bufferSize 8192
 #define PROTOCOL_TCP
@@ -33,8 +36,8 @@ uint16_t i1=0;
 uint8_t buf2[bufferSize];
 uint16_t i2=0;
 
-const char* ssid     = "stek";         // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password = "79024101631aA";     // The password of the Wi-Fi network
+const char* ssid     = "MikroBridge";         // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = "DarkDay1999";     // The password of the Wi-Fi network
 const int port = 9876;
 WiFiServer server(port);
 WiFiClient client;
